@@ -1,3 +1,5 @@
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+
 import java.util.Scanner;
 public class Main {
 
@@ -8,9 +10,9 @@ public class Main {
         int j;
         int i;
         double sum = 0;
-        double average = 0;
+        double average;
         double hits = 0;
-        double percentage = 0;
+        double percentage;
 
         int[][] atBat = new int[1][]; //jagged array
         //jagged array has different number of columns for each row
@@ -20,11 +22,11 @@ public class Main {
 
         for (i = 0; i < atBat.length; i++) {
 
-            System.out.println("Please enter a number of times at bat: ");
+            System.out.println("Please enter a number of times at bat: "); //collects the number of columns
             int bat = scan.nextInt();
             System.out.println();
 
-            atBat[i] = new int[bat]; //create the column array
+            atBat[i] = new int[bat]; //creates the column
 
             System.out.println("0 = Out, 1 = Single, 2 = Double, 3 = Triple, 4 = Home Run");
             System.out.println();
@@ -32,7 +34,7 @@ public class Main {
             for (j = 0; j < atBat[i].length; j++) {
 
                     System.out.println("Enter result for at-bat: ");
-                    atBat[i][j] = scan.nextInt();
+                    atBat[i][j] = rangeValidator();
 
                    if (atBat[i][j] != 0) {
                        hits++;
@@ -54,5 +56,21 @@ public class Main {
 
         }
 
+
+        public static int rangeValidator() {
+
+            Scanner scan = new Scanner(System.in);
+
+            int input = scan.nextInt();
+
+            while(input < 0 || input> 4 ) {
+
+                System.out.println("Please enter a number between 0 and 4!");
+                input = scan.nextInt();
+            }
+
+            return input;
+
+        }
 
 }
