@@ -1,5 +1,3 @@
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 import java.util.Scanner;
 public class Main {
 
@@ -63,7 +61,7 @@ public class Main {
 
             int input = scan.nextInt();
 
-            while(input < 0 || input> 4 ) {
+            while(input < 0 || input > 4 ) {
 
                 System.out.println("Please enter a number between 0 and 4!");
                 input = scan.nextInt();
