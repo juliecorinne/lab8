@@ -20,17 +20,29 @@ public class Main {
 
             atBatMath(scan, sum, hits, atBat);
 
-            System.out.println();
-            System.out.println("Would you like to try another batter? Y/N");
-            scan.nextLine();
-            userInput = scan.nextLine();
-            System.out.println();
+            userInput = userContinue(scan);
 
         } while (userInput.equalsIgnoreCase("y"));
 
         System.out.println("Bye!");
 
         //method is called inside the do while loop, easier to read
+
+    }
+
+    public static String userContinue(Scanner scan) {
+
+        String userInput;
+        System.out.println();
+        System.out.println("Would you like to try another batter? Y/N");
+        scan.nextLine();
+        userInput = scan.nextLine();
+        System.out.println();
+
+        return userInput;
+
+        //asks user if they would like to continue
+        //collects user input and proceeds accordingly
 
     }
 
@@ -67,7 +79,7 @@ public class Main {
             average = hits / bat;
 
             System.out.println();
-            System.out.printf("The batting average is: %.3f\n", average); //%.3f formats to 3 decimal places
+            System.out.printf("The batting average is: %.3f\n", average); //%.3f formats to 3 decimal places, f is used for float
             System.out.println();
             System.out.printf("The slugging percentage is: %.3f\n", percentage);
 
