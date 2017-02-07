@@ -10,8 +10,8 @@ public class Main {
         double hits = 0;
         String userInput;
 
-        int[][] atBat = new int[1][]; //jagged array
-        //jagged array has different number of columns for each row
+        int[][] atBat = new int[1][];
+        //jagged array - has different number of columns for each row
 
         System.out.println("Welcome to the Batting Average Calculator!");
         System.out.println();
@@ -30,6 +30,8 @@ public class Main {
 
         System.out.println("Bye!");
 
+        //method is called inside the do while loop, easier to read
+
     }
 
     public static void atBatMath(Scanner scan, double sum, double hits, int[][] atBat) {
@@ -38,13 +40,14 @@ public class Main {
         int j;
         double percentage;
         double average;
+
         for (i = 0; i < atBat.length; i++) {
 
             System.out.println("Please enter a number of times at bat: "); //collects the number of columns
             int bat = scan.nextInt();
             System.out.println();
 
-            atBat[i] = new int[bat]; //creates the column
+            atBat[i] = new int[bat]; //creates the columns
 
             System.out.println("0 = Out, 1 = Single, 2 = Double, 3 = Triple, 4 = Home Run");
             System.out.println();
@@ -83,7 +86,7 @@ public class Main {
 
         return hits;
 
-        //math for adding up how many hits
+        //math for adding up how many hits (numbers != 0)
     }
 
     public static int rangeValidator() {
