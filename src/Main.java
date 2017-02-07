@@ -21,12 +21,12 @@ public class Main {
             atBatMath(scan, sum, hits, atBat);
 
             System.out.println();
-            System.out.println("Would you like to try another batter? yes/no");
+            System.out.println("Would you like to try another batter? Y/N");
             scan.nextLine();
             userInput = scan.nextLine();
             System.out.println();
 
-        } while (userInput.equalsIgnoreCase("yes"));
+        } while (userInput.equalsIgnoreCase("y"));
 
         System.out.println("Bye!");
 
@@ -67,9 +67,9 @@ public class Main {
             average = hits / bat;
 
             System.out.println();
-            System.out.println("The batting average is: " + average);
+            System.out.printf("The batting average is: %.3f\n", average); //%.3f formats to 3 decimal places
             System.out.println();
-            System.out.println("The slugging percentage is: " + percentage);
+            System.out.printf("The slugging percentage is: %.3f\n", percentage);
 
             //gathers info for each hit, calculates sum and hits
             //calculates percentage and average
