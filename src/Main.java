@@ -6,8 +6,6 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
-        int j;
-        int i;
         double sum = 0;
         double hits = 0;
         String userInput;
@@ -20,13 +18,13 @@ public class Main {
 
         do {
 
-        atBatMath(scan, sum, hits, atBat);
+            atBatMath(scan, sum, hits, atBat);
 
             System.out.println();
             System.out.println("Would you like to try another batter? yes/no");
             scan.nextLine();
             userInput = scan.nextLine();
-            scan.nextLine();
+            System.out.println();
 
         } while (userInput.equalsIgnoreCase("yes"));
 
