@@ -75,7 +75,7 @@ public class Main {
 
             }
 
-            percentage = sum / bat;
+            percentage = sum / bat; //sum of the result for at-bat / bat # user inputed
             average = hits / bat;
 
             System.out.println();
